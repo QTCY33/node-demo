@@ -24,16 +24,7 @@ var server = http.createServer(function (request, response) {
   if (path === '/') {
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/html;charset=utf-8')
-    response.write(`
-      <!DOCTYPE html>
-        <head>
-          <link rel='stylesheet' href='/x'>
-        </head>
-        <body>
-          <h1>标题</h1>
-        </body>
-      </html>
-      `)
+    response.write(`二哈`)
     response.end()
   } else if (path === '/x') {
     response.statusCode = 200
@@ -52,4 +43,3 @@ var server = http.createServer(function (request, response) {
 
 server.listen(port)
 console.log('监听 ' + port + ' 成功\n请用在空中转体720度然后用电饭煲打开 http://localhost:' + port)
-
